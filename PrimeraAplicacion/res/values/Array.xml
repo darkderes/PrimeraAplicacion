@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="producto">
+         <item>--Elija Producto--</item>
+ 		 <item>PESCADO</item>
+ 		 <item>FRUTAS</item>
+ 		 <item>PASTAS</item>
+ 		 <item>SALSAS</item>
+ 		 <item>LEGUMBRES</item>	
+ 	</string-array> 
+</resources>
