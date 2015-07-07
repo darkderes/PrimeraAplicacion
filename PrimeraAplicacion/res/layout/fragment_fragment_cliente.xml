@@ -100,7 +100,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView2"
+        android:layout_below="@+id/btn_view_cliente"
         android:adjustViewBounds="true"
+        android:scaleType="centerInside"
         android:src="@drawable/logo" />
+
+    <Button
+        android:id="@+id/btn_view_cliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:background="#1ED142"
+        android:textColor="#ffffff"
+        android:text="Listado" />
+
+    <Button
+        android:id="@+id/Btn_Eliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView1"
+        android:layout_alignRight="@+id/imageView1"
+        android:layout_marginRight="11dp"
+        android:background="#1ED142"
+        android:text="Eliminar"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/Btn_Modificar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:background="#1ED142"
+        android:text="Modificar"
+        android:textColor="#ffffff" />
 
 </RelativeLayout>

@@ -2,6 +2,7 @@ package cl.inacap.unidad1.activity;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -21,6 +22,7 @@ public class Fragment_Cliente extends Fragment {
  public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstancedState){
      View rootView = inflater.inflate(R.layout.fragment_fragment_cliente, container, false);
      Button btn_add = (Button)rootView.findViewById(R.id.btn_agregarCl);
+     Button btn_view = (Button)rootView.findViewById(R.id.btn_view_cliente);
 		final EditText nombre = (EditText)rootView.findViewById(R.id.txt_nombre);
 		final EditText direccion = (EditText)rootView.findViewById(R.id.txt_direccion);
 		final EditText telefono = (EditText)rootView.findViewById(R.id.txt_telefono);
@@ -35,8 +37,17 @@ public class Fragment_Cliente extends Fragment {
 				s.insertar(nombre.getText().toString(),direccion.getText().toString(),Integer.parseInt(telefono.getText().toString()));
 				s.cerrar();
 				Toast.makeText(getActivity(),"Cliente ingresado correctamente",Toast.LENGTH_SHORT).show();
-				/*Intent intent = new Intent(Add_ClienteActivity.this,MenuClientesActivity.class);		
-				Add_ClienteActivity.this.startActivity(intent);*/
+			}});
+		btn_view.setOnClickListener(new OnClickListener(){// Boton ingresa clientes a base de datos.
+
+			@Override
+			public void onClick(View v) {
+				Fragment_View_Clientes s = new Fragment_View_Clientes();
+				FragmentManager fragmentManager = getFragmentManager();
+				fragmentManager
+						.beginTransaction()
+						.replace(R.id.container,s)
+						.commit();
 			}});
      return rootView;
  }

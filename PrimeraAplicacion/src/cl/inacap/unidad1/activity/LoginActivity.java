@@ -54,7 +54,7 @@ public class LoginActivity extends Activity {
 		}
 		else
 		{
-			//Toast.makeText(LoginActivity.this,"Usuario o contrase�a incorrecto",Toast.LENGTH_SHORT).show();
+			Toast.makeText(LoginActivity.this,"Usuario o contraseña incorrecto",Toast.LENGTH_SHORT).show();
 		}
 		
 	}
