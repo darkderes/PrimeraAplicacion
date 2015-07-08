@@ -2,6 +2,8 @@ package cl.inacap.unidad1.SqlLite;
 import java.util.ArrayList;
 import java.util.Date;
 
+import org.junit.Test;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -85,6 +87,7 @@ public class SQLite {
 	                sqliteHelper.id + " = " + id , 
 					null, null, null, null);
 		}
+		
 		public int getUltimoID()
 		{
 			int id = 0;
