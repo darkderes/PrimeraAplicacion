@@ -13,23 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:src="@drawable/logo" />
-
-    <Button
-        android:id="@+id/btn_salir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="46dp"
-        android:background="#1ED142"
-        android:bottomLeftRadius="10dp"
-        android:bottomRightRadius="10dp"
-        android:text="Salir"
-        android:textColor="#ffffff"
-        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView1"
@@ -41,5 +25,54 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#6F172C"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_salir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/imageView1"
+        android:background="#1ED142"
+        android:bottomLeftRadius="10dp"
+        android:bottomRightRadius="10dp"
+        android:text="Salir"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Txt_longitud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Txt_latitud"
+        android:layout_below="@+id/Txt_latitud"
+        android:layout_marginTop="20dp"
+        android:text="longitud" />
+
+    <TextView
+        android:id="@+id/Txt_precision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Txt_longitud"
+        android:layout_below="@+id/Txt_longitud"
+        android:layout_marginTop="25dp"
+        android:text="precision" />
+
+    <TextView
+        android:id="@+id/Txt_latitud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_below="@+id/imageView1"
+        android:text="latitud" />
+
+    <TextView
+        android:id="@+id/TxtEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_salir"
+        android:layout_alignLeft="@+id/btn_salir"
+        android:layout_marginBottom="24dp"
+        android:text="estado" />
 
 </RelativeLayout>

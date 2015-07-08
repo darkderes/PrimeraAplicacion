@@ -60,13 +60,13 @@
         android:id="@+id/txt_pedido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignLeft="@+id/Txt_latitud"
         android:layout_marginTop="25dp"
         android:text="TextView"
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/Txt_latitud"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/sp_cliente"
@@ -80,7 +80,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/Txt_latitud"
         android:layout_marginTop="11dp"
         android:background="@android:color/white"
         android:textSize="20sp" />
