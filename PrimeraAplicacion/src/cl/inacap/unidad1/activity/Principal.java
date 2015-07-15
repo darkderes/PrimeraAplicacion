@@ -72,7 +72,13 @@ public class Principal extends FragmentActivity implements
 			objFragment = new Fragment_Resumen();
 			mTitle = "Resumen";
 			break;
-	   /* case 3:
+		
+	 	case 4:
+	 		objFragment = new Fragment_Mapa();
+			mTitle = "Mapa";
+			break;
+			
+	/*   case 3:
 		      objFragment = new Fragment_Pedido();
 		      mTitle = "Pedidos";
 			  break;*/

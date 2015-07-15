@@ -75,6 +75,8 @@ public class SQLite {
 									  }, 
 					null, null, null, null, null);
 		}
+		
+		
 		public Cursor getRegistro( int id )
 		{
 			return db.query( "clientes" ,				
@@ -87,7 +89,19 @@ public class SQLite {
 	                sqliteHelper.id + " = " + id , 
 					null, null, null, null);
 		}
-		
+		public Cursor getMaps()
+		{
+			Log.i("SqlLite","Select :");
+			return db.query("mapas" ,				
+						new String[]{
+					sqliteHelper.id_mapa,
+					sqliteHelper.longitud,
+					sqliteHelper.latitud,
+					sqliteHelper.zoom,
+					sqliteHelper.usuario
+									  }, 
+					null, null, null, null, null);	
+		}
 		public int getUltimoID()
 		{
 			int id = 0;
@@ -163,6 +177,36 @@ public class SQLite {
 			  
 			 return db.insert("pedidos", null,contentValues);
 		 }
+		public long insertarMapa(double longitud,double latitud,String zoom,String usuario)
+		{
+			Log.i("Sqlite","Insert :");
+			ContentValues contentValues = new ContentValues();
+			contentValues.put("longitud",longitud);
+			contentValues.put("latitud",latitud);
+			contentValues.put("zoom",zoom);
+			contentValues.put("usuario",usuario);
+			
+			
+			return db.insert("mapas",null,contentValues);
+			
+		}
+		public ArrayList<String> getMapa( Cursor cursor )
+		{
+			ArrayList<String> listData = new ArrayList<String>();
+			String item = "";
+				if( cursor.moveToFirst() )
+				{
+					do
+					{		
+						item += cursor.getDouble(1);
+						item += cursor.getDouble(2);
+						item += cursor.getString(3); 
+						listData.add( item );
+						item="";            
+					} while ( cursor.moveToNext() );
+				}		
+			return listData;		
+		}
 	 
 
 }

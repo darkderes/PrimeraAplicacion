@@ -19,5 +19,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">About ...</string>
     <string name="title_activity_fragment__cliente">Fragment_Cliente</string>
+    <string name="title_activity_fragment_mapa">Fragment_mapa</string>
 
 </resources>

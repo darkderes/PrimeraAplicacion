@@ -61,16 +61,17 @@ public class Fragment_Cliente extends Fragment {
      return rootView;
  }
  public void llamar(String x)
+ 
  {
-	 Fragment_View_Clientes s = new Fragment_View_Clientes();
-	         Bundle parametro = new Bundle();
-	         parametro.putString("Key",x);
-	         s.setArguments(parametro);
-				FragmentManager fragmentManager = getFragmentManager();
-				fragmentManager
-						.beginTransaction()
-						.replace(R.id.container,s)
-						.commit();
+	Fragment_View_Clientes s = new Fragment_View_Clientes();
+	Bundle parametro = new Bundle();
+	parametro.putString("Key",x);
+	s.setArguments(parametro);
+	FragmentManager fragmentManager = getFragmentManager();
+	fragmentManager
+	.beginTransaction()
+	.replace(R.id.container,s)
+	.commit();
  }
 /** IMPORTANTE: Sobrecargar el método de BaseFragment **/
  public void onCreateOptionsMenu(Menu menu, ActionBar actionBar, MenuInflater inflater){

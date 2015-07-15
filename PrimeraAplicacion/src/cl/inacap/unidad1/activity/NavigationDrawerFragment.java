@@ -114,7 +114,7 @@ public class NavigationDrawerFragment extends Fragment {
 				.getThemedContext(),
 				android.R.layout.simple_list_item_activated_1,
 				android.R.id.text1, new String[] {
-						"Home","Clientes","Pedidos","Resumen" }));
+						"Home","Clientes","Pedidos","Resumen","Mapa de ruta" }));
 		mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
 		return mDrawerListView;
 	}
