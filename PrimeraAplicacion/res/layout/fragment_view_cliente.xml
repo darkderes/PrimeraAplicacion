@@ -9,7 +9,7 @@
     tools:context="cl.inacap.unidad1.activity.ClienteActivity" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/Txt_msj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/edit_nombre"
@@ -125,7 +125,7 @@
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView1"
+        android:layout_above="@+id/Txt_msj"
         android:layout_below="@+id/textView3"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"

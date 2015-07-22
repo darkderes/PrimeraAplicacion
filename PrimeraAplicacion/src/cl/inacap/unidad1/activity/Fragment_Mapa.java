@@ -30,6 +30,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -41,6 +42,7 @@ public class Fragment_Mapa extends Fragment {
     double zoom;
     String usuario;
     Button marcador;
+    TextView msj;
     int valor = 0;
 
 
@@ -49,11 +51,13 @@ public class Fragment_Mapa extends Fragment {
 public View onCreateView(LayoutInflater inflater, ViewGroup container,
         Bundle savedInstanceState) {
     // TODO Auto-generated method stub
-    View view = inflater
+    final View view = inflater
                 .inflate(R.layout.fragment_fragment_mapa, container, false);
         
 	mMapView = (MapView)view.findViewById(R.id.map);
 	marcador = (Button)view.findViewById(R.id.Btn_marcador);
+	msj = (TextView)view.findViewById(R.id.Txt_msj);
+	marcador.setVisibility(view.INVISIBLE);
 	mMapView.onCreate(savedInstanceState);
 	mMapView.onResume();
 	  try { 
@@ -129,6 +133,8 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container,
 					ser.cerrar();
 					Toast.makeText(getActivity(), "Marker is added to the Map", Toast.LENGTH_SHORT).show();	
 					posicionMap();
+					marcador.setVisibility(view.INVISIBLE);
+		   			msj.setVisibility(view.VISIBLE);
 					}
 					else
 					{
@@ -164,9 +170,9 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container,
    			drawMarker(point,"juan");
    			latitude = point.latitude;
    			longitude = point.longitude;
-   			zoom = googleMap.getCameraPosition().zoom;
-   			
-   			
+   			zoom = googleMap.getCameraPosition().zoom; 		
+   			marcador.setVisibility(view.VISIBLE);
+   			msj.setVisibility(view.INVISIBLE);
    		}
    		
    	});

@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_weight="1.13"
+        class="com.google.android.gms.maps.SupportMapFragment" >
+    </com.google.android.gms.maps.MapView>
+
+    <Button
+        android:id="@+id/Btn_marcador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="addMarker"
+        android:text="marcador" />
+
+    <TextView
+        android:id="@+id/Txt_msj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.09"
+        android:text="Elija un punto del mapa para agregar ruta"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</LinearLayout>

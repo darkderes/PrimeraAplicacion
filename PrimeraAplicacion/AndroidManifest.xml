@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cl.inacap.unidad1.activity"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0" 
+   >
+    
 
     <uses-feature
         android:glEsVersion="0x00020000"
@@ -22,56 +24,67 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme" 
+         >
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
         <activity
             android:name=".Splash"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                  
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".ClientesActivity"
-            android:label="@string/title_activity_client" >
+            android:label="@string/title_activity_client"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".MenuActivity"
-            android:label="@string/title_activity_menu" >
+            android:label="@string/title_activity_menu" 
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".MenuClientesActivity"
-            android:label="@string/title_activity_menu_clientes" >
+            android:label="@string/title_activity_menu_clientes" 
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".Add_ClienteActivity"
-            android:label="@string/title_activity_add__cliente" >
+            android:label="@string/title_activity_add__cliente" 
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".ClienteActivity"
-            android:label="@string/title_activity_cliente" >
+            android:label="@string/title_activity_cliente"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name=".LoginActivity" >
+        <activity android:name=".LoginActivity" 
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".Principal"
-            android:label="@string/title_activity_principal" >
+            android:label="@string/title_activity_principal" 
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".Fragment_Cliente"
-            android:label="@string/title_activity_fragment__cliente" >
+            android:label="@string/title_activity_fragment__cliente" 
+            android:screenOrientation="portrait">
         </activity>
 
        
 
         <activity
             android:name=".Fragment_mapa"
-            android:label="@string/title_activity_fragment_mapa" >
+            android:label="@string/title_activity_fragment_mapa"
+            android:screenOrientation="portrait" >
         </activity>
          
        <meta-data

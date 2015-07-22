@@ -103,8 +103,8 @@
         android:id="@+id/sp_cliente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView1"
-        android:layout_alignLeft="@+id/textView1"
+        android:layout_above="@+id/Txt_msj"
+        android:layout_alignLeft="@+id/Txt_msj"
         android:background="@android:color/white"
         android:textSize="20sp" />
 
@@ -118,7 +118,7 @@
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/Txt_msj"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/sp_producto"

@@ -8,7 +8,7 @@ import android.content.Context;
 public class SQLiteHelper extends SQLiteOpenHelper{
 
 	 //nombre de la base de datos
-	 private static final String database = "bdd_maps";
+	 private static final String database = "bdd_mapSS";
 	
 	 //tabla clientes
 	 public final String id = "id"; 

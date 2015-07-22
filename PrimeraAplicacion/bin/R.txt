@@ -119,6 +119,7 @@ int id TxtEstado 0x7f070037
 int id Txt_direccion 0x7f070038
 int id Txt_latitud 0x7f07001e
 int id Txt_longitud 0x7f070035
+int id Txt_msj 0x7f070028
 int id Txt_precision 0x7f070036
 int id action_example 0x7f070044
 int id action_settings 0x7f070043
@@ -167,7 +168,6 @@ int id sp_producto 0x7f070021
 int id strict_sandbox 0x7f07000c
 int id terrain 0x7f070007
 int id test 0x7f07000d
-int id textView1 0x7f070028
 int id textView3 0x7f07001c
 int id textView4 0x7f07002e
 int id txt_cantidad 0x7f070023
