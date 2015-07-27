@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Firts Aplication</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_usuarios">UsuariosActivity</string>
+    <string name="title_activity_client">ClientActivity</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_menu_clientes">MenuClientesActivity</string>
+    <string name="title_activity_add__cliente">Add_ClienteActivity</string>
+    <string name="title_activity_cliente">ClienteActivity</string>
+    <string name="title_activity_splash">Splash</string>
+    <string name="title_activity_principal">Principal</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">About ...</string>
+    <string name="title_activity_fragment__cliente">Fragment_Cliente</string>
+    <string name="title_activity_fragment_mapa">Fragment_mapa</string>
+    <string name="Viewcontrasena">Pass :</string>
+    <string name="ViewUsuario">User :</string>
+    <string name="Login">Login</string>
+    <string name="Bienvenido">Welcome</string>
+    <string name="Salir">Exit</string>
+    <string name="latitud">latitude</string>
+    <string name="longitud">longitude</string>
+    <string name="precision">precition</string>
+    <string name="estado">status</string>
+    <string name="NombreCliente">Customer Name</string>
+    <string name="Direccion">Address</string>
+    <string name="Telefono">Phone</string>
+    <string name="Agregar">Add</string>
+    
+    <string name="Listado">List</string>
+    <string name="Modificar">Update</string>
+    <string name="Eliminar">Delete</string>
+
+    <string name="NombreUpdate">Name</string>
+    <string name="DireccionUpdate">Address</string>
+    <string name="TelefonoUpdate">Phone</string> 
+    <string name="Edicion">Customer Edition</string>
+    <string name="EliminarUpdate">Delete</string>
+    <string name="ModificarUpdate">Update</string>
+    
+     <string name="ClientePedido">Customer</string>
+     <string name="Productos">Products</string>
+     <string name="Cantidad">Quantity</string> 
+     <string name="Precio">Price</string>
+     <string name="AgregarPedido">Add</string>
+     
+     <string name="marcador">Mark</string>
+     <string name="Elija">Chosse a point on the map to add road</string>
+
+    
+
+</resources>
