@@ -22,30 +22,13 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/txt_nombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView3"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_alignRight="@+id/txt_direccion"
-        android:layout_marginBottom="12dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textColor="#6F172C"
-        android:textSize="20sp"
-        android:textStyle="bold" >
-
-        <requestFocus />
-    </EditText>
-
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/Viewcontrasena"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/txt_direccion"
         android:layout_alignLeft="@+id/txt_direccion"
-        android:text="Direccion"
+        android:text="@string/Direccion"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -55,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/txt_nombre"
         android:layout_alignLeft="@+id/txt_nombre"
-        android:text="Nombre cliente"
+        android:text="@string/NombreCliente"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -67,7 +50,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:background="#1ED142"
-        android:text="Agregar"
+        android:text="@string/Agregar"
         android:textColor="#ffffff"
         android:textStyle="bold" />
 
@@ -91,7 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/txt_telefono"
         android:layout_alignLeft="@+id/txt_telefono"
-        android:text="Telefono"
+        android:text="@string/Telefono"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -114,7 +97,7 @@
         android:layout_marginTop="15dp"
         android:background="#1ED142"
         android:textColor="#ffffff"
-        android:text="Listado" />
+        android:text="@string/Listado" />
 
     <Button
         android:id="@+id/Btn_Eliminar"
@@ -124,7 +107,7 @@
         android:layout_alignRight="@+id/imageView1"
         android:layout_marginRight="11dp"
         android:background="#1ED142"
-        android:text="Eliminar"
+        android:text="@string/Eliminar"
         android:textColor="#ffffff" />
 
     <Button
@@ -134,7 +117,21 @@
         android:layout_above="@+id/imageView1"
         android:layout_centerHorizontal="true"
         android:background="#1ED142"
-        android:text="Modificar"
+        android:text="@string/Modificar"
         android:textColor="#ffffff" />
+
+    <EditText
+        android:id="@+id/txt_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Viewcontrasena"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="11dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#6F172C"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

@@ -18,28 +18,6 @@
         android:scaleType="fitCenter"
         android:src="@drawable/logo" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/txt_login"
-        android:layout_marginTop="18dp"
-        android:text="Contraseña :"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/Txt_latitud"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txt_login"
-        android:layout_below="@+id/imageView1"
-        android:layout_marginTop="16dp"
-        android:text="Usuario :"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
     <Button
         android:id="@+id/btn_salir"
         android:layout_width="wrap_content"
@@ -51,7 +29,7 @@
         android:background="#1ED142"
         android:bottomLeftRadius="10dp"
         android:bottomRightRadius="10dp"
-        android:text="Login"
+        android:text="@string/Login"
         android:textColor="#ffffff"
         android:textStyle="bold" />
 
@@ -59,12 +37,34 @@
         android:id="@+id/txt_contrasena"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView3"
+        android:layout_above="@+id/btn_salir"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/textView3"
+        android:layout_marginBottom="25dp"
         android:ems="10"
         android:inputType="textPassword"
+        android:singleLine="true"
         android:textColor="#6F172C"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Viewcontrasena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txt_contrasena"
+        android:layout_alignLeft="@+id/txt_contrasena"
+        android:text="@string/Viewcontrasena"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Txt_latitud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txt_login"
+        android:layout_alignLeft="@+id/txt_login"
+        android:text="@string/ViewUsuario"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -72,14 +72,13 @@
         android:id="@+id/txt_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView3"
+        android:layout_above="@+id/Viewcontrasena"
+        android:layout_alignLeft="@+id/Viewcontrasena"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/Txt_latitud"
         android:ems="10"
+        android:singleLine="true"
         android:textColor="#6F172C"
         android:textSize="20sp"
         android:textStyle="bold" />
-    
-
 
 </RelativeLayout>

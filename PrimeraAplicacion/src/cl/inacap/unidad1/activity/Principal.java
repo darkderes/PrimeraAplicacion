@@ -1,5 +1,7 @@
 package cl.inacap.unidad1.activity;
 
+import java.util.Locale;
+
 import android.app.Activity;
 import android.app.ActionBar;
 import android.app.AlertDialog;
@@ -55,6 +57,7 @@ public class Principal extends FragmentActivity implements
 	public void onNavigationDrawerItemSelected(int position) {
 		// update the main content by replacing fragments
 		Fragment objFragment = null;
+		Locale defaultLocale = Locale.getDefault();
 		switch(position){
 		case 0:
 			objFragment = new Fragment_Home();
@@ -62,21 +65,49 @@ public class Principal extends FragmentActivity implements
 			break;
 		case 1:
 			objFragment = new Fragment_Cliente();
+			if(defaultLocale.getISO3Language().equals("spa")){
 			mTitle = "Clientes";
 			break;		
+			}
+			else
+			{
+			mTitle = "Customer";
+			break;
+			}
 		case 2:
-		    objFragment = new Fragment_Pedido();
-		    mTitle = "Pedidos";
-		    break;	
+			objFragment = new Fragment_Pedido();
+			if(defaultLocale.getISO3Language().equals("spa")){
+			mTitle = "Pedidos";
+			break;		
+			}
+			else
+			{
+			mTitle = "Order";
+			break;
+			}
 		case 3:
 			objFragment = new Fragment_Resumen();
+			if(defaultLocale.getISO3Language().equals("spa")){
 			mTitle = "Resumen";
+			break;		
+			}
+			else
+			{
+			mTitle = "Sumary";
 			break;
+			}
 		
 	 	case 4:
 	 		objFragment = new Fragment_Mapa();
-			mTitle = "Mapa";
+			if(defaultLocale.getISO3Language().equals("spa")){
+			mTitle = "Mapas";
+			break;		
+			}
+			else
+			{
+			mTitle = "Maps";
 			break;
+			}
 			
 	/*   case 3:
 		      objFragment = new Fragment_Pedido();
@@ -190,10 +221,21 @@ public class Principal extends FragmentActivity implements
 		switch(keyCode){
 			case KeyEvent.KEYCODE_BACK:
 				AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-				dialog.setTitle("¿Seguro desea salir?");
-				dialog.setMessage(" se perderan sus datos ingresados");
-				dialog.setCancelable(false);
-				dialog.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+Locale defaultLocale = Locale.getDefault();
+				
+				if(defaultLocale.getISO3Language().equals("spa")){
+					dialog.setTitle("¿Seguro desea salir?");
+					dialog.setMessage("se puden perder sus datos");
+					dialog.setCancelable(false);
+						
+				}
+				else
+				{
+					dialog.setTitle("¿Sure you want to quit?");
+					dialog.setMessage(" You could lose your data");
+					dialog.setCancelable(false);
+				}
+				dialog.setPositiveButton("Si/YES", new DialogInterface.OnClickListener() {
 				 
 				  @Override
 			    public void onClick(DialogInterface dialog, int which) {

@@ -81,7 +81,7 @@ public class Fragment_Pedido extends Fragment {
  	SQLite s = new SQLite(getActivity());
  	s.abrir();
  	num = s.getUltimoID()+1;
- 	pedido.setText("Numero Pedido "+Integer.toString(num));
+ 	pedido.setText("PO :"+Integer.toString(num));
  	s.cerrar();
  }
 /** IMPORTANTE: Sobrecargar el método de BaseFragment **/

@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/txt_precio"
         android:layout_alignLeft="@+id/txt_cantidad"
-        android:text="Precio"
+        android:text="@string/Precio"
         android:textSize="20sp" 
         android:textStyle="bold"/>
 
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/txt_cantidad"
         android:layout_alignLeft="@+id/sp_producto"
-        android:text="Cantidad"
+        android:text="@string/Cantidad"
         android:textSize="20sp" 
         android:textStyle="bold"/>
 
@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/sp_cliente"
         android:layout_alignLeft="@+id/sp_cliente"
-        android:text="Cliente"
+        android:text="@string/ClientePedido"
         android:textSize="20sp"
         android:textStyle="bold"  />
 
@@ -85,7 +85,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="11dp"
         android:background="#1ED142"
-        android:text="Agregar Pedido"
+        android:text="@string/AgregarPedido"
         android:textColor="#ffffff"
         android:textStyle="bold" />
     
@@ -123,7 +123,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/sp_producto"
         android:layout_alignLeft="@+id/sp_producto"
-        android:text="Productos"
+        android:text="@string/Productos"
         android:textSize="20sp"
         android:textStyle="bold" />
     

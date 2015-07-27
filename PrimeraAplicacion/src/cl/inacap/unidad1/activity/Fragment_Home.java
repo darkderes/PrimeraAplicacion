@@ -10,6 +10,7 @@ import java.net.NetworkInterface;
 import java.net.URL;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 
 import org.apache.http.conn.util.InetAddressUtils;
 
@@ -53,16 +54,33 @@ public class Fragment_Home extends Fragment {
      lblLatitud = (TextView)rootView.findViewById(R.id.Txt_latitud);
      lblDireccion = (TextView)rootView.findViewById(R.id.Txt_direccion);
      Button salir = (Button)rootView.findViewById(R.id.btn_salir);
-     lblDireccion.setText("Dreccion IP local: "+getIPAddress(true));
+     lblDireccion.setText("IP(local): "+getIPAddress(true));
      salir.setOnClickListener(new OnClickListener(){// Boton ingresa clientes a base de datos.
 
 			@Override
 			public void onClick(View v) {
 				AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity());
-				dialog.setTitle("¿Seguro desea salir?");
-				dialog.setMessage(" se perderan sus datos ingresados");
-				dialog.setCancelable(false);
-				dialog.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+				Locale defaultLocale = Locale.getDefault();
+				
+				if(defaultLocale.getISO3Language().equals("spa")){
+					dialog.setTitle("¿Seguro desea salir?");
+					dialog.setMessage("se puden perder sus datos");
+					dialog.setCancelable(false);
+						
+				}
+				else
+				{
+					dialog.setTitle("¿Sure you want to quit?");
+					dialog.setMessage(" You could lose your data");
+					dialog.setCancelable(false);
+				}
+				
+				
+				
+				
+				dialog.setPositiveButton("Si/Yes", new DialogInterface.OnClickListener() 
+				
+				{
 				 
 				  @Override
 			    public void onClick(DialogInterface dialog, int which) {
@@ -118,17 +136,17 @@ public class Fragment_Home extends Fragment {
  private void muestraPosicion(Location loc) {
      if(loc != null)
      {
-         lblLatitud.setText("Latitud: " + String.valueOf(loc.getLatitude()));
-         lblLongitud.setText("Longitud: " + String.valueOf(loc.getLongitude()));
-         lblPrecision.setText("Precision: " + String.valueOf(loc.getAccuracy()));
+         lblLatitud.setText(String.valueOf(loc.getLatitude()));
+         lblLongitud.setText(String.valueOf(loc.getLongitude()));
+         lblPrecision.setText(String.valueOf(loc.getAccuracy()));
          Log.i("LocAndroid", String.valueOf(
          loc.getLatitude() + " - " + String.valueOf(loc.getLongitude())));
      }
      else
      {
-         lblLatitud.setText("Latitud: (sin_datos)");
-         lblLongitud.setText("Longitud: (sin_datos)");
-         lblPrecision.setText("Precision: (sin_datos)");
+         lblLatitud.setText("(sin_datos)");
+         lblLongitud.setText("(sin_datos)");
+         lblPrecision.setText("(sin_datos)");
      }
     
  }

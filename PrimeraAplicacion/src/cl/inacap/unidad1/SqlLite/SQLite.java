@@ -1,6 +1,9 @@
 package cl.inacap.unidad1.SqlLite;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 
 import org.junit.Test;
 
@@ -13,6 +16,7 @@ import android.util.Log;
 public class SQLite {
 	SQLiteHelper sqliteHelper;
 	SQLiteDatabase db;
+	private SimpleDateFormat formatoFecha;
 	public SQLite(Context context) {
 		// TODO Auto-generated constructor stub
 		sqliteHelper = new SQLiteHelper(context);
@@ -145,19 +149,30 @@ public class SQLite {
 		}
 		public ArrayList<String> getFormatListPedido( Cursor cursor )
 		{
+			Locale defaultLocale = Locale.getDefault();
+			String precio = " ";
+			if(defaultLocale.getISO3Language().equals("spa")){
+				//formatoFecha = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());		//formatoFecha = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
+		        precio = "$ ";
+		    }else{
+		    	//formatoFecha = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
+			    precio = "U$ ";
+			}
 			ArrayList<String> listData = new ArrayList<String>();
 			String item = "";
 				if( cursor.moveToFirst() )
 				{
 					do
-					{		
-						item += "Pedido: ["+ cursor.getInt(0) +"]\r\n";
-						item += "Cliente: " + cursor.getString(1) + "\r\n";
-						item += "Producto: " + cursor.getString(2) + "\r\n";
-						item += "Cantidad: " + cursor.getInt(3) + "\r\n";
-						item += "Precio: " + cursor.getInt(4) + "\r\n";
-						item += "Total: " + cursor.getInt(5) + "\r\n";
-						item += "Fecha Entrega: " +  cursor.getString(6) + "\r\n";
+					{
+						
+						item += "PO: ["+ cursor.getInt(0) +"]\r\n";
+						item += "Cliente/Costumer: " + cursor.getString(1) + "\r\n";
+						item += "Producto/Products: " + cursor.getString(2) + "\r\n";
+						item += "Cantidad/Quantity: " + cursor.getInt(3) + "\r\n";
+						item += "Precio/Price: "+precio + cursor.getInt(4) + "\r\n";
+						item += "Total :"+precio+ String.valueOf(cursor.getInt(5)) + "\r\n";
+						item += "Fecha entrega/Date deadline " + cursor.getString(6)   + "\r\n";
+					
 						listData.add( item );
 						item="";            
 					} while ( cursor.moveToNext() );

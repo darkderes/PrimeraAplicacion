@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/imageView1"
         android:layout_centerHorizontal="true"
-        android:text="Bienvenido ..."
+        android:text="@string/Bienvenido"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#6F172C"
         android:textStyle="bold" />
@@ -36,51 +36,91 @@
         android:background="#1ED142"
         android:bottomLeftRadius="10dp"
         android:bottomRightRadius="10dp"
-        android:text="Salir"
+        android:text="@string/Salir"
         android:textColor="#ffffff"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/Txt_latitud"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/imageView1"
         android:layout_below="@+id/imageView1"
-        android:text="latitud" />
+        android:text="@string/longitud" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TxtEstado"
+        android:layout_alignBottom="@+id/TxtEstado"
+        android:layout_alignLeft="@+id/Txt_direccion"
+        android:text="@string/estado" />
+
+    <TextView
+        android:id="@+id/TextView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Txt_latitud"
+        android:layout_alignBottom="@+id/Txt_latitud"
+        android:layout_alignLeft="@+id/textView1"
+        android:text="@string/latitud" />
 
     <TextView
         android:id="@+id/Txt_longitud"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/Txt_latitud"
-        android:layout_below="@+id/Txt_latitud"
-        android:layout_marginTop="10dp"
-        android:text="longitud" />
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignLeft="@+id/Txt_msj"
+        android:text="longitud2" />
 
     <TextView
-        android:id="@+id/Txt_precision"
+        android:id="@+id/Txt_latitud"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/Txt_longitud"
+        android:layout_alignRight="@+id/imageView1"
         android:layout_below="@+id/Txt_longitud"
-        android:layout_marginTop="13dp"
-        android:text="precision" />
-
-    <TextView
-        android:id="@+id/TxtEstado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/Txt_precision"
-        android:layout_below="@+id/Txt_precision"
-        android:layout_marginTop="13dp"
-        android:text="estado" />
+        android:layout_marginTop="17dp"
+        android:text="latitud" />
 
     <TextView
         android:id="@+id/Txt_direccion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/TxtEstado"
-        android:layout_marginTop="13dp"
-        android:text="Direcion" />
+        android:layout_alignLeft="@+id/btn_salir"
+        android:layout_alignRight="@+id/btn_salir"
+        android:layout_below="@+id/TextView02"
+        android:layout_marginTop="16dp"
+        android:text="@string/Direccion" />
+
+    <TextView
+        android:id="@+id/TxtEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Txt_latitud"
+        android:layout_alignRight="@+id/Txt_direccion"
+        android:layout_below="@+id/TextView03"
+        android:layout_marginTop="17dp"
+        android:text="@string/estado" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView02"
+        android:layout_below="@+id/TextView04"
+        android:layout_marginTop="18dp"
+        android:text="@string/precision" />
+
+    <TextView
+        android:id="@+id/Txt_precision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/TxtEstado"
+        android:layout_alignLeft="@+id/TxtEstado"
+        android:layout_alignRight="@+id/TxtEstado"
+        android:text="precision" />
 
 </RelativeLayout>

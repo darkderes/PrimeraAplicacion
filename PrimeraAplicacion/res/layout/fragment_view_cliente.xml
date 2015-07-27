@@ -15,7 +15,7 @@
         android:layout_alignBottom="@+id/edit_nombre"
         android:layout_alignLeft="@+id/edit_nombre"
         android:layout_marginBottom="32dp"
-        android:text="Nombre"
+        android:text="@string/NombreUpdate"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -26,7 +26,7 @@
         android:layout_above="@+id/edit_direccion"
         android:layout_alignLeft="@+id/edit_nombre"
         android:layout_marginBottom="13dp"
-        android:text="Direccion" 
+        android:text="@string/DireccionUpdate" 
         android:textSize="20sp"
         android:textStyle="bold"/>
 
@@ -79,22 +79,9 @@
         android:layout_above="@+id/edit_telefono"
         android:layout_alignLeft="@+id/edit_telefono"
         android:layout_marginBottom="12dp"
-        android:text="Telefono"
+        android:text="@string/TelefonoUpdate"
         android:textSize="20sp"
         android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:shadowDx="1"
-        android:shadowDy="3"
-        android:text="Edicion de Clientes"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#6F172C"
-        android:textSize="25sp" />
 
     <Button
         android:id="@+id/btn_delete_cliente"
@@ -104,7 +91,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:background="#1ED142"
-        android:text="Eliminar"
+        android:text="@string/EliminarUpdate"
         android:textColor="#ffffff"
         android:textStyle="bold" />
 
@@ -115,18 +102,32 @@
         android:layout_alignBaseline="@+id/btn_delete_cliente"
         android:layout_alignBottom="@+id/btn_delete_cliente"
         android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/imageView1"
+        android:layout_alignParentRight="true"
         android:background="#1ED142"
-        android:text="Modificar"
+        android:text="@string/ModificarUpdate"
         android:textColor="#ffffff"
         android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Viewcontrasena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:shadowDx="1"
+        android:shadowDy="3"
+        android:text="@string/Edicion"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#6F172C"
+        android:textSize="25sp" />
 
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/Txt_msj"
-        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/Viewcontrasena"
+        android:layout_alignRight="@+id/Viewcontrasena"
+        android:layout_below="@+id/Viewcontrasena"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
         android:src="@drawable/logo" />

@@ -34,7 +34,7 @@
         android:id="@+id/txt_nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignLeft="@+id/contraseña"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/Txt_latitud"
         android:ems="10"
@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/textView3"
+        android:layout_below="@+id/contraseña"
         android:ems="10"
         android:textColor="#6F172C"
         android:textSize="20sp"
@@ -67,7 +67,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/Viewcontrasena"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/txt_direccion"

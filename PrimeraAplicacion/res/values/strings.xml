@@ -20,5 +20,43 @@
     <string name="action_example">About ...</string>
     <string name="title_activity_fragment__cliente">Fragment_Cliente</string>
     <string name="title_activity_fragment_mapa">Fragment_mapa</string>
+   
+    <string name="Viewcontrasena">Contraseña :</string>
+    <string name="ViewUsuario">Usuario :</string>
+    <string name="Login">Acceso</string>
+    <string name="Bienvenido">Bienvenido</string>
+    <string name="Salir">Salir</string>
+    
+    <string name="latitud">latitud</string>
+    <string name="longitud">longitud</string>
+    <string name="precision">precision</string>
+    <string name="estado">estado</string>
+    
+    
+    <string name="NombreCliente">Nombre Cliente</string>
+    <string name="Direccion">Direccion</string>
+    <string name="Telefono">Telefono</string>
+    
+     <string name="Agregar">Agregar</string>
+     
+     <string name="Listado">Lista</string>
+     <string name="Modificar">Modificar</string>
+     <string name="Eliminar">Eliminar</string>
+     
+     
+     <string name="NombreUpdate">Nombre</string>
+    <string name="DireccionUpdate">Direccion</string>
+     <string name="TelefonoUpdate">Telefono</string> 
+     <string name="Edicion">Edicion Clientes</string>
+     <string name="EliminarUpdate">Eliminar</string>
+     <string name="ModificarUpdate">Modificar</string>
+     
+      <string name="ClientePedido">Cliente</string>
+     <string name="Productos">Productos</string>
+     <string name="Cantidad">Cantidad</string> 
+     <string name="Precio">Precio</string>
+     <string name="AgregarPedido">Agregar</string>
+     <string name="marcador">Marcador</string>
+     <string name="Elija">Elija un punto del mapa para agregar ruta</string>
 
 </resources>

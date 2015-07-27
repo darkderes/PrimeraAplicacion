@@ -13,10 +13,10 @@
 
     <Button
         android:id="@+id/Btn_marcador"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="addMarker"
-        android:text="marcador" />
+        android:text="@string/marcador" />
 
     <TextView
         android:id="@+id/Txt_msj"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="0.09"
-        android:text="Elija un punto del mapa para agregar ruta"
+        android:text="@string/Elija"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </LinearLayout>

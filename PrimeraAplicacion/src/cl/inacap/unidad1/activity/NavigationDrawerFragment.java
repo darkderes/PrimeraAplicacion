@@ -1,5 +1,7 @@
 package cl.inacap.unidad1.activity;
 
+import java.util.Locale;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ActionBar;
@@ -110,11 +112,32 @@ public class NavigationDrawerFragment extends Fragment {
 						selectItem(position);
 					}
 				});
+		String v[] = new String[5];
+		Locale defaultLocale = Locale.getDefault();
+		
+		if(defaultLocale.getISO3Language().equals("spa")){
+			//formatoFecha = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());		//formatoFecha = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
+	         v[0] = "Home"; 
+		     v[1] = "Clientes";
+		     v[2] = "Pedidos";
+		     v[3] = "Resumen";
+		     v[4] = "Mapa de ruta";
+	    }else{
+	    	//formatoFecha = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
+	    	 v[0] = "Home"; 
+			 v[1] = "Customer";
+			 v[2] = "Order";
+			 v[3] = "Sumary";
+			 v[4] = "Maps of road";
+		   
+		}
+		
+		
 		mDrawerListView.setAdapter(new ArrayAdapter<String>(getActionBar()
 				.getThemedContext(),
 				android.R.layout.simple_list_item_activated_1,
-				android.R.id.text1, new String[] {
-						"Home","Clientes","Pedidos","Resumen","Mapa de ruta" }));
+				android.R.id.text1, v/*new String[] {
+						"Home","Clientes","Pedidos","Resumen","Mapa de ruta" }*/));
 		mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
 		return mDrawerListView;
 	}
